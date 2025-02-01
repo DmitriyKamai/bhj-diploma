@@ -1,3 +1,5 @@
+// const { response } = require("express");
+
 /**
  * Класс Sidebar отвечает за работу боковой колонки:
  * кнопки скрытия/показа колонки в мобильной версии сайта
@@ -8,7 +10,7 @@ class Sidebar {
    * Запускает initAuthLinks и initToggleButton
    * */
   static init() {
-    this.initAuthLinks();
+    this.initAuthLinks() 
     this.initToggleButton();
   }
 
@@ -18,7 +20,13 @@ class Sidebar {
    * при нажатии на кнопку .sidebar-toggle
    * */
   static initToggleButton() {
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
 
+    sidebarToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      document.body.classList.toggle('sidebar-open');
+      document.body.classList.toggle('sidebar-collapse');
+    })
   }
 
   /**
@@ -29,6 +37,32 @@ class Sidebar {
    * выходу устанавливает App.setState( 'init' )
    * */
   static initAuthLinks() {
+    const registerButton = document.querySelector('.menu-item_register');
+    const loginButton = document.querySelector('.menu-item_login');
+    const logoutButton = document.querySelector('.menu-item_logout')
 
-  }
+    registerButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modal = App.getModal('register');
+      modal.open();
+    });
+
+    loginButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      const modal = App.getModal('login');
+      modal.open();
+    });
+
+    logoutButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      function userLogoutSetState(err, response) {
+        if (response.success) {
+          App.setState('init');
+        } else if (err) {
+          console.log(err);
+        }
+      }
+      User.logout(userLogoutSetState);
+    });
+  };
 }
