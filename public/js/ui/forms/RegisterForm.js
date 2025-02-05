@@ -12,7 +12,6 @@ class RegisterForm extends AsyncForm {
   onSubmit(data) {
     function loginUser(err, response) {
         if (response && response.user) {
-          console.log('callback: RegisterForm.onSubmit() : logged');
           App.setState('user-logged');
         } else if (err) {
           console.log(err);

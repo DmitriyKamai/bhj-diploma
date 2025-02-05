@@ -40,7 +40,6 @@ class CreateTransactionForm extends AsyncForm {
   onSubmit(data) {
     const modalId = this.element.closest('.modal').getAttribute('data-modal-id');
     Transaction.create(data, (err, response) => {
-      console.log(response)
       if (response && response.success) {
         App.update();
         const modal = App.getModal(modalId);

@@ -67,6 +67,7 @@ class TransactionsPage {
           data.append('id', lastOptions.account_id);
           Account.remove(data, (err, response) => {
             if (response && response.success) {
+              this.clear([]);
               App.updateWidgets();
               App.updateForms();
             } else if (err) {
@@ -94,7 +95,6 @@ class TransactionsPage {
       const data = new FormData;
       data.append('id', id);
       Transaction.remove(data, (err, response) => {
-        console.log('2')
         if (response && response.success) {
           App.update();
         } else if (err) {
@@ -138,7 +138,7 @@ class TransactionsPage {
    * Устанавливает заголовок: «Название счёта»
    * */
   clear() {
-    TransactionsPage.renderTransactions([]);
+    this.renderTransactions([]);
     const contentTitle = document.querySelector('.content-title');
     contentTitle.textContent = 'Название счёта';  
   }
@@ -217,17 +217,19 @@ class TransactionsPage {
   renderTransactions(data) {
     const contentElement = document.querySelector('.content');
     contentElement.innerHTML = "";
-    data.forEach(element => {
-      contentElement.insertAdjacentHTML('beforeend', this.getTransactionHTML(element));
-    })
-    const deleteTransaction = [...document.querySelectorAll('.transaction__remove')];
-    if (deleteTransaction.length) {
-      deleteTransaction.forEach(element => {
-        element.addEventListener('click', (e) => {
-          e.preventDefault();
-          this.removeTransaction(e.currentTarget.dataset.id, e.currentTarget.dataset.name);
-        })
+    if (data.length) {
+      data.forEach(element => {
+        contentElement.insertAdjacentHTML('beforeend', this.getTransactionHTML(element));
       })
+      const deleteTransaction = [...document.querySelectorAll('.transaction__remove')];
+      if (deleteTransaction.length) {
+        deleteTransaction.forEach(element => {
+          element.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.removeTransaction(e.currentTarget.dataset.id, e.currentTarget.dataset.name);
+          })
+        })
+      }
     }
   }
 }

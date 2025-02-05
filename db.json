@@ -290,11 +290,6 @@
       "id": "2vi7b6hkm6l1npke"
     },
     {
-      "name": "Новый счётик",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "id": "2vi7bujgm6l3iqbk"
-    },
-    {
       "name": "Беларусбанк",
       "user_id": "2vi7bpq8m6kx3n0e",
       "id": "2vi7bbt4m6m2omhd"
@@ -302,7 +297,7 @@
     {
       "name": "Альфабанк",
       "user_id": "2vi7bpq8m6kx3n0e",
-      "id": "2vi7bx1sm6m6f8ki"
+      "id": "2vi7b13wcm6s17g2r"
     }
   ],
   "transactions": [
@@ -442,76 +437,40 @@
       "user_id": "1"
     },
     {
-      "id": "2vi7b8vgm6m39uog",
-      "type": "income",
-      "name": "2313",
-      "sum": 12312,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T11:07:38.511Z"
-    },
-    {
-      "id": "2vi7b59wm6m3enic",
-      "type": "income",
-      "name": "4234",
-      "sum": 34234,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T11:11:22.499Z"
-    },
-    {
-      "id": "2vi7b6a4m6m3ha3h",
-      "type": "expense",
-      "name": "31231",
-      "sum": 232131,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T11:13:25.084Z"
-    },
-    {
-      "id": "2vi7bg48m6m6fclo",
-      "type": "income",
-      "name": "213412",
-      "sum": 33,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T12:35:53.867Z"
-    },
-    {
-      "id": "2vi7bkgwm6m6fo1k",
-      "type": "income",
-      "name": "312312",
-      "sum": 3123213,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T12:36:08.695Z"
-    },
-    {
-      "id": "2vi7ba1om6m6fvxh",
-      "type": "income",
-      "name": "4123",
-      "sum": 12312,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T12:36:18.916Z"
-    },
-    {
-      "id": "2vi7bm94m6m6hk5x",
-      "type": "income",
-      "name": "3123",
-      "sum": 123,
-      "account_id": "2vi7bujgm6l3iqbk",
-      "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T12:37:36.980Z"
-    },
-    {
-      "id": "2vi7by3wm6m7809o",
+      "id": "2vi7b11ugm6s0n32f",
       "type": "income",
       "name": "123",
-      "sum": 12211,
-      "account_id": "2vi7bx1sm6m6f8ki",
+      "sum": 32,
+      "account_id": "2vi7bbt4m6m2omhd",
       "user_id": "2vi7bpq8m6kx3n0e",
-      "created_at": "2025-02-01T12:58:10.907Z"
+      "created_at": "2025-02-05T14:40:34.118Z"
+    },
+    {
+      "id": "2vi7b1cr0m6s0n950",
+      "type": "income",
+      "name": "fdfdsf",
+      "sum": 31312,
+      "account_id": "2vi7bbt4m6m2omhd",
+      "user_id": "2vi7bpq8m6kx3n0e",
+      "created_at": "2025-02-05T14:40:41.987Z"
+    },
+    {
+      "id": "2vi7b18x4m6s0nwnz",
+      "type": "income",
+      "name": "gf",
+      "sum": 3123,
+      "account_id": "2vi7bbt4m6m2omhd",
+      "user_id": "2vi7bpq8m6kx3n0e",
+      "created_at": "2025-02-05T14:41:12.478Z"
+    },
+    {
+      "id": "2vi7b7y4m6s17mxi",
+      "type": "income",
+      "name": "312312fdfdf",
+      "sum": 312312,
+      "account_id": "2vi7b13wcm6s17g2r",
+      "user_id": "2vi7bpq8m6kx3n0e",
+      "created_at": "2025-02-05T14:56:32.981Z"
     }
   ]
 }
